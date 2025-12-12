@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Servicio multimedia seguro</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Servicio multimedia seguro</h1>
+
+    <section class="card">
+      <h2>Fase 1 — Cifrar multimedia</h2>
+      <button id="btnCifrar">Ejecutar fase 1 (cifrar)</button>
+      <p id="phase1msg" class="msg"></p>
+    </section>
+
+    <section class="card">
+      <h2>Fase 2 — Crear administrador</h2>
+      <input id="adminPass" type="password" placeholder="passphrase admin" />
+      <button id="btnPhase2">Crear admin y cifrar claves AES</button>
+      <p id="phase2msg" class="msg"></p>
+    </section>
+
+    <section class="card">
+      <h2>Fase 3 — Crear usuario / Conceder acceso</h2>
+      <input id="newUser" placeholder="nombre usuario" />
+      <button id="btnCreateUser">Crear usuario</button>
+      <br/><br/>
+      <input id="grantUser" placeholder="usuario a dar acceso" />
+      <input id="adminPassGrant" type="password" placeholder="passphrase admin" />
+      <button id="btnGrant">Conceder acceso</button>
+      <p id="phase3msg" class="msg"></p>
+    </section>
+
+    <section class="card">
+      <h2>Descifrar (como usuario)</h2>
+      <select id="fileList"></select>
+      <input id="userForDecrypt" placeholder="usuario" />
+      <button id="btnDecrypt">Descifrar en servidor</button>
+      <p id="decryptMsg" class="msg"></p>
+      <a id="downloadLink" href="#" download>Descargar archivo descifrado</a>
+    </section>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
